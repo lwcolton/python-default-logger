@@ -2,6 +2,7 @@ import logging
 
 def get_default_logger(name, level=None):
     logger = logging.getLogger(name)
+    logger.handlers = []
     if level is None:
         level = logging.INFO
     logger.setLevel(level)
